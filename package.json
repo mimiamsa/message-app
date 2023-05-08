@@ -15,11 +15,17 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.6.1",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@next/font": "^13.1.6",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/react-dom": "^18.0.11",
+    "framer-motion": "^10.12.8",
     "next": "^13.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "sharp": "^0.31.3",
     "styled-components": "^5.3.6"
   },
