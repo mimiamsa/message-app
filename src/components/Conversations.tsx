@@ -1,7 +1,8 @@
-import React, { MouseEventHandler, ReactElement, useEffect } from "react";
+import React, { ReactElement } from "react";
 import { Conversation } from "../types/conversation";
-import { Button, VStack } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, VStack } from "@chakra-ui/react";
+
+import { ConversationCard } from "./ConversationCard";
 
 type ConversationsProps = { conversations: Conversation[] };
 
@@ -9,14 +10,12 @@ export const Conversations = ({
   conversations,
 }: ConversationsProps): ReactElement => {
   return (
-    <>
-      <VStack spacing={8}>
-        {conversations.map(({ id }) => (
-          <Link key={id} href={`conversations/${id}`}>
-            <Button>{id}</Button>
-          </Link>
+    <Box w="full" margin="0 auto" marginY={8} paddingX={8}>
+      <VStack spacing={6}>
+        {conversations.map((conversation: Conversation) => (
+          <ConversationCard key={conversation.id} conversation={conversation} />
         ))}
       </VStack>
-    </>
+    </Box>
   );
 };
