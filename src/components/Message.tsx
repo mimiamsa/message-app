@@ -6,6 +6,7 @@ type MessageProps = {
   messageBody: string;
   messageAuth: number;
   senderName: string;
+  messageId: number;
 };
 
 interface TextMessageProps extends TextProps {
@@ -36,17 +37,23 @@ export const Message: React.FC<MessageProps> = ({
   messageBody,
   messageAuth,
   senderName,
+  messageId,
 }: MessageProps) => {
   if (messageAuth === loggedUserId) {
     return (
-      <TextMessage bg="blue.500" color="white" alignSelf="end">
+      <TextMessage
+        bg="blue.500"
+        color="white"
+        alignSelf="end"
+        data-testid={`received-message${messageId}`}
+      >
         {messageBody}
       </TextMessage>
     );
   }
 
   return (
-    <Box>
+    <Box data-testid={`received-message${messageId}`}>
       <Text fontSize="sm" color="gray.500" mb={1}>
         {senderName}
       </Text>

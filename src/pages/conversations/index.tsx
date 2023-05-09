@@ -9,7 +9,7 @@ const Conversations: NextPage = () => {
     data: storedConversations,
     isError,
     isLoading,
-  } = useGetConversationsQuery(loggedUserId.toString());
+  } = useGetConversationsQuery(loggedUserId);
 
   if (isLoading) {
     return <>...</>;

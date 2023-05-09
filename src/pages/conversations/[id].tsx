@@ -29,11 +29,15 @@ const Conversation: NextPage = () => {
     data: conversations,
     isLoading: isLoadingconversation,
     isError: conversationError,
-  } = useGetConversationsQuery(loggedUserId.toString());
-
-  const senderName = conversations?.filter(
-    (conversation) => conversation.id == conversationId
-  )[0].senderNickname;
+  } = useGetConversationsQuery(loggedUserId);
+  /** @todo: this should be handled in a selector out of this component
+   * but I could not find out why the selectors are not working with RTK
+   * and conversationId comes from url and its not safe perfectly **/
+  const senderName =
+    router.isReady &&
+    conversations?.filter(
+      (conversation) => conversation.id == conversationId
+    )[0].senderNickname;
 
   const [sendMessage] = useSendMessageMutation();
   if (isLoadingMessage || isLoadingconversation || !router.isReady) {
@@ -73,6 +77,7 @@ const Conversation: NextPage = () => {
             messageAuth={message.authorId}
             messageBody={message.body}
             senderName={senderName}
+            messageId={message.id}
           />
         ))}
         <MessageInput

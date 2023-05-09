@@ -11,10 +11,6 @@ import { useRouter } from "next/router";
 export const loggedUserId = getLoggedUserId();
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // const { query } = useRouter();
-  // const title = query.id
-  //   ? `Conversation`
-  //   : `${loggedUserId} Conversations List `;
   return (
     <Provider store={store}>
       <ChakraProvider>
