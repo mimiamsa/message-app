@@ -8,14 +8,14 @@ const conversationApi = chatApi.injectEndpoints({
       query: (userId) => `conversations/${userId}`,
       providesTags: ["Conversations"],
     }),
-    addConversations: build.mutation({
-      query: (formData: Conversation) => ({
-        url: `conversations/${formData.recipientId}`,
-        method: "POST",
-        body: formData,
-      }),
-      invalidatesTags: ["Conversations"],
-    }),
+    // addConversations: build.mutation({
+    //   query: (formData: Conversation) => ({
+    //     url: `conversations/${formData.recipientId}`,
+    //     method: "POST",
+    //     body: formData,
+    //   }),
+    //   invalidatesTags: ["Conversations"],
+    // }),
   }),
   overrideExisting: false,
 });

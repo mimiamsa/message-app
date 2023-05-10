@@ -24,15 +24,12 @@ const Conversation: NextPage = () => {
     isLoading: isLoadingMessage,
   } = useGetMessagesQuery(conversationId, { skip: !router.isReady });
 
-  // @todo : remove this fetch and use selector
   const {
     data: conversations,
     isLoading: isLoadingconversation,
     isError: conversationError,
   } = useGetConversationsQuery(loggedUserId);
-  /** @todo: this should be handled in a selector out of this component
-   * but I could not find out why the selectors are not working with RTK
-   * and conversationId comes from url and its not safe perfectly **/
+
   const senderName =
     router.isReady &&
     conversations?.filter(
