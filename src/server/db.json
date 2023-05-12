@@ -57,34 +57,6 @@
       "timestamp": 1620284667,
       "authorId": 2,
       "body": "Bonjour c'est le premier message de la seconde conversation"
-    },
-    {
-      "conversationId": 1,
-      "authorId": 1,
-      "timestamp": 1683626616507,
-      "body": "tg",
-      "id": 5
-    },
-    {
-      "conversationId": 1,
-      "authorId": 1,
-      "timestamp": 1683628063978,
-      "body": "jo",
-      "id": 6
-    },
-    {
-      "conversationId": 1,
-      "authorId": 1,
-      "timestamp": 1683659967953,
-      "body": "trertr",
-      "id": 7
-    },
-    {
-      "conversationId": 2,
-      "authorId": 1,
-      "timestamp": 1683662783407,
-      "body": "ghfgfg",
-      "id": 8
     }
   ],
   "users": [
