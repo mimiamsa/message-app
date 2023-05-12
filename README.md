@@ -10,11 +10,15 @@ I achieve the test using RTK query for the store/api part. I used Chackra Ui as 
 
 2. then run
 
-`yarn build `
+`yarn build`
 
 3. to launch the app run
 
-`yarn dev `
+`yarn dev`
+
+4. launch server
+
+`yarn start server`
 
 # Exercise :
 

@@ -6,5 +6,5 @@ import mockRouter from "next-router-mock";
 
 jest.mock("next/router", () => require("next-router-mock"));
 describe("Messages chat", () => {
-  it("should display existing messages", async () => {});
+  it("should add message in the when send message", async () => {});
 });

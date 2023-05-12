@@ -19,6 +19,7 @@ export const ConversationCard = ({ conversation }: CardProps) => {
       href={`conversations/${conversation.id}`}
       w="full"
       maxW={["100%", "100%", "60%"]}
+      data-testid="conversation-card"
     >
       <Card
         display="grid"
